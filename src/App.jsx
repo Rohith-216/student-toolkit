@@ -8,6 +8,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import CGPAToPercentage from "./pages/CGPAToPercentage";
 import AttendanceShortageCalculator from "./pages/AttendanceShortageCalculator";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Disclaimer from "./pages/Disclaimer";
+import Terms from "./pages/Terms";
 // import AgeCalculator from "./pages/AgeCalculator";
 
 function App() {
@@ -23,6 +26,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cgpa-to-percentage" element={<CGPAToPercentage />} />
         <Route path="/attendance-shortage-calculator" element={<AttendanceShortageCalculator />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/terms" element={<Terms />} />
+
       </Routes>
     </BrowserRouter>
   );

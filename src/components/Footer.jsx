@@ -7,6 +7,9 @@ export default function Footer() {
         <div className="flex gap-5">
           <Link to="/about">About</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/privacy-policy">Privacy Policy</Link>
+          <Link to="/disclaimer">Disclaimer</Link>
+          <Link to="/terms">Terms of Service</Link>
         </div>
 
         <p className="mt-4">
