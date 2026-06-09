@@ -28,5 +28,11 @@ export const tools = [
     category: "Student",
     path: "/cgpa-to-percentage",
     description: "Convert CGPA into Percentage"
+  },
+  {
+    name: "Attendance Shortage Calculator",
+    category: "Student",
+    path: "/attendance-shortage-calculator",
+    description: "Find how many classes you need to reach your attendance target"
   }
 ];

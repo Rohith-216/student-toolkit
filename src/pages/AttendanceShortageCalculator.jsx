@@ -12,6 +12,8 @@ export default function AttendanceShortageCalculator() {
     const T = Number(total);
     const R = Number(required);
 
+    if (!A || !T || !R) return;
+
     const x = Math.ceil(
       ((R * T) - (100 * A)) / (100 - R)
     );
@@ -21,43 +23,46 @@ export default function AttendanceShortageCalculator() {
 
   return (
     <Layout title="Attendance Shortage Calculator">
-      <div className="bg-white p-6 rounded-xl shadow">
-        <input
-          type="number"
-          placeholder="Classes Attended"
-          value={attended}
-          onChange={(e) => setAttended(e.target.value)}
-          className="border p-3 w-full mb-4"
-        />
+      <div className="max-w-3xl mx-auto">
+        <div className="bg-white rounded-2xl shadow-lg p-8">
 
-        <input
-          type="number"
-          placeholder="Total Classes"
-          value={total}
-          onChange={(e) => setTotal(e.target.value)}
-          className="border p-3 w-full mb-4"
-        />
+          <input
+            type="number"
+            placeholder="Classes Attended"
+            value={attended}
+            onChange={(e) => setAttended(e.target.value)}
+            className="w-full p-4 border rounded-xl mb-4"
+          />
 
-        <input
-          type="number"
-          placeholder="Required Attendance %"
-          value={required}
-          onChange={(e) => setRequired(e.target.value)}
-          className="border p-3 w-full mb-4"
-        />
+          <input
+            type="number"
+            placeholder="Total Classes"
+            value={total}
+            onChange={(e) => setTotal(e.target.value)}
+            className="w-full p-4 border rounded-xl mb-4"
+          />
 
-        <button
-          onClick={calculate}
-          className="bg-blue-600 text-white px-5 py-3 rounded"
-        >
-          Calculate
-        </button>
+          <input
+            type="number"
+            placeholder="Required Attendance %"
+            value={required}
+            onChange={(e) => setRequired(e.target.value)}
+            className="w-full p-4 border rounded-xl mb-4"
+          />
 
-        {result !== "" && (
-          <div className="mt-4 text-xl font-bold">
-            You need {result} more classes.
-          </div>
-        )}
+          <button
+            onClick={calculate}
+            className="bg-blue-600 text-white px-6 py-3 rounded-xl"
+          >
+            Calculate
+          </button>
+
+          {result !== "" && (
+            <div className="mt-6 text-xl font-bold">
+              You need {result} more classes to reach {required}% attendance.
+            </div>
+          )}
+        </div>
       </div>
     </Layout>
   );
