@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://student-toolkit-azure.vercel.app/sitemap.xml

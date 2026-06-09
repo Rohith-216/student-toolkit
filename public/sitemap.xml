@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/about</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/contact</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/attendance-calculator</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/cgpa-calculator</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/percentage-calculator</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/age-calculator</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/cgpa-to-percentage</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/attendance-shortage-calculator</loc>
+</url>
+
+</urlset>
