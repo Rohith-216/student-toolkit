@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
+import { Helmet } from "react-helmet-async";
 
 export default function CGPACalculator() {
   const [gpas, setGpas] = useState("");
@@ -20,6 +21,13 @@ export default function CGPACalculator() {
 
   return (
     <Layout title="CGPA Calculator">
+      <Helmet>
+        <title>CGPA Calculator | StudentToolkit</title>
+        <meta
+          name="description"
+          content="Free CGPA calculator for students."
+        />
+      </Helmet>
       <input
         type="text"
         placeholder="8.2, 8.5, 9.0"

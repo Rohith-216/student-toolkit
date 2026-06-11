@@ -8,7 +8,7 @@ export default function Navbar() {
           to="/"
           className="text-2xl font-bold text-blue-600"
         >
-          StudentToolkit
+          🎓 StudentToolkit
         </Link>
 
         <div className="flex gap-6">

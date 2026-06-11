@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
+import { Helmet } from "react-helmet-async";
 
 export default function AttendanceCalculator() {
   const [attended, setAttended] = useState("");
@@ -16,37 +17,46 @@ export default function AttendanceCalculator() {
   };
 
   return (
-    <Layout title="Attendance Calculator">
-      <div className="bg-white rounded-2xl shadow-lg p-8">
-        <input
-          type="number"
-          placeholder="Classes Attended"
-          className="border p-3 w-full mb-4"
-          value={attended}
-          onChange={(e) => setAttended(e.target.value)}
+    <>
+      <Helmet>
+        <title>Attendance Calculator | StudentToolkit</title>
+        <meta
+          name="description"
+          content="Free attendance calculator for students."
         />
+      </Helmet>
+      <Layout title="Attendance Calculator">
+        <div className="bg-white rounded-2xl shadow-lg p-8">
+          <input
+            type="number"
+            placeholder="Classes Attended"
+            className="border p-3 w-full mb-4"
+            value={attended}
+            onChange={(e) => setAttended(e.target.value)}
+          />
 
-        <input
-          type="number"
-          placeholder="Total Classes"
-          className="border p-3 w-full mb-4"
-          value={total}
-          onChange={(e) => setTotal(e.target.value)}
-        />
+          <input
+            type="number"
+            placeholder="Total Classes"
+            className="border p-3 w-full mb-4"
+            value={total}
+            onChange={(e) => setTotal(e.target.value)}
+          />
 
-        <button
-          onClick={calculate}
-          className="bg-black text-white px-5 py-3 rounded"
-        >
-          Calculate
-        </button>
+          <button
+            onClick={calculate}
+            className="bg-black text-white px-5 py-3 rounded"
+          >
+            Calculate
+          </button>
 
-        {result && (
-          <div className="mt-6 text-xl font-bold">
-            Attendance: {result}%
-          </div>
-        )}
-      </div>
-    </Layout>
+          {result && (
+            <div className="mt-6 text-xl font-bold">
+              Attendance: {result}%
+            </div>
+          )}
+        </div>
+      </Layout>
+    </>
   );
 }

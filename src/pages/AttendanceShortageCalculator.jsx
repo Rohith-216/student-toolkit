@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
+import { Helmet } from "react-helmet-async";
 
 export default function AttendanceShortageCalculator() {
   const [attended, setAttended] = useState("");
@@ -22,48 +23,57 @@ export default function AttendanceShortageCalculator() {
   };
 
   return (
-    <Layout title="Attendance Shortage Calculator">
-      <div className="max-w-3xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-lg p-8">
+    <>
+      <Helmet>
+        <title>Attendance Shortage Calculator | StudentToolkit</title>
+        <meta
+          name="description"
+          content="Free attendance shortage calculator for students."
+        />
+      </Helmet>
+      <Layout title="Attendance Shortage Calculator">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-lg p-8">
 
-          <input
-            type="number"
-            placeholder="Classes Attended"
-            value={attended}
-            onChange={(e) => setAttended(e.target.value)}
-            className="w-full p-4 border rounded-xl mb-4"
-          />
+            <input
+              type="number"
+              placeholder="Classes Attended"
+              value={attended}
+              onChange={(e) => setAttended(e.target.value)}
+              className="w-full p-4 border rounded-xl mb-4"
+            />
 
-          <input
-            type="number"
-            placeholder="Total Classes"
-            value={total}
-            onChange={(e) => setTotal(e.target.value)}
-            className="w-full p-4 border rounded-xl mb-4"
-          />
+            <input
+              type="number"
+              placeholder="Total Classes"
+              value={total}
+              onChange={(e) => setTotal(e.target.value)}
+              className="w-full p-4 border rounded-xl mb-4"
+            />
 
-          <input
-            type="number"
-            placeholder="Required Attendance %"
-            value={required}
-            onChange={(e) => setRequired(e.target.value)}
-            className="w-full p-4 border rounded-xl mb-4"
-          />
+            <input
+              type="number"
+              placeholder="Required Attendance %"
+              value={required}
+              onChange={(e) => setRequired(e.target.value)}
+              className="w-full p-4 border rounded-xl mb-4"
+            />
 
-          <button
-            onClick={calculate}
-            className="bg-blue-600 text-white px-6 py-3 rounded-xl"
-          >
-            Calculate
-          </button>
+            <button
+              onClick={calculate}
+              className="bg-blue-600 text-white px-6 py-3 rounded-xl"
+            >
+              Calculate
+            </button>
 
-          {result !== "" && (
-            <div className="mt-6 text-xl font-bold">
-              You need {result} more classes to reach {required}% attendance.
-            </div>
-          )}
+            {result !== "" && (
+              <div className="mt-6 text-xl font-bold">
+                You need {result} more classes to reach {required}% attendance.
+              </div>
+            )}
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 }

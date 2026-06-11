@@ -11,6 +11,10 @@ import AttendanceShortageCalculator from "./pages/AttendanceShortageCalculator";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Disclaimer from "./pages/Disclaimer";
 import Terms from "./pages/Terms";
+import GPACalculator from "./pages/GPACalculator";
+import SGPAcalculator from "./pages/SGPACalculator";
+import SemesterPercentageCalculator from "./pages/SemesterPercentageCalculator";
+import StudyTimetableGenerator from "./pages/StudyTimetableGenerator";
 // import AgeCalculator from "./pages/AgeCalculator";
 
 function App() {
@@ -29,7 +33,10 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/terms" element={<Terms />} />
-
+        <Route path="/gpa-calculator" element={<GPACalculator />} />
+        <Route path="/sgpa-calculator" element={<SGPAcalculator />} />
+        <Route path="/semester-percentage-calculator" element={<SemesterPercentageCalculator />}/>
+        <Route path="/study-timetable-generator" element={<StudyTimetableGenerator />}/>
       </Routes>
     </BrowserRouter>
   );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
+import { Helmet } from "react-helmet-async";
 
 export default function PercentageCalculator() {
   const [obtained, setObtained] = useState("");
@@ -15,6 +16,13 @@ export default function PercentageCalculator() {
 
   return (
     <Layout title="Percentage Calculator">
+      <Helmet>
+        <title>Percentage Calculator | StudentToolkit</title>
+        <meta
+          name="description"
+          content="Free percentage calculator for students."
+        />
+      </Helmet>
       <div className="p-8">
         <input
           type="number"

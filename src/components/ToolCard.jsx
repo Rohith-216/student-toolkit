@@ -21,6 +21,9 @@ export default function ToolCard({
       <p className="mt-4 text-blue-600 font-semibold">
         Open Tool →
       </p>
+      <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-sm">
+        {category}
+      </span>
     </Link>
   );
 }

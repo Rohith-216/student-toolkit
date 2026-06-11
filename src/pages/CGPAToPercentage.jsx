@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
+import { Helmet } from "react-helmet-async";
 
 export default function CGPAToPercentage() {
   const [cgpa, setCgpa] = useState("");
@@ -12,6 +13,13 @@ export default function CGPAToPercentage() {
 
   return (
     <Layout title="CGPA to Percentage Converter">
+      <Helmet>
+        <title>CGPA to Percentage Converter | StudentToolkit</title>
+        <meta
+          name="description"
+          content="Free CGPA to percentage converter for students."
+        />
+      </Helmet>
       <div className="bg-white p-6 rounded-xl shadow">
         <input
           type="number"
