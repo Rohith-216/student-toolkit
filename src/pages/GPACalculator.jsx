@@ -57,7 +57,25 @@ export default function GPACalculator() {
               GPA: {gpa}
             </div>
           )}
+        </div>
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-4">
+            What is GPA?
+          </h2>
 
+          <p className="mb-4">
+            GPA (Grade Point Average) is the average of all grade points
+            obtained in all subjects or courses taken during a semester or degree.
+          </p>
+
+          <div className="bg-gray-100 p-4 rounded-xl font-semibold">
+            GPA = Sum of Grade Points ÷ Number of Subjects
+          </div>
+
+          <p className="mt-4">
+            Example: If your grade points are 8, 9, 7, and 10,
+            your GPA is 8.5.
+          </p>
         </div>
       </div>
     </Layout>

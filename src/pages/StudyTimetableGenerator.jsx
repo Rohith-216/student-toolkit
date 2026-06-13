@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
+import { Helmet } from "react-helmet-async";
 
 export default function StudyTimetableGenerator() {
   const [subjects, setSubjects] = useState("");
@@ -30,6 +31,13 @@ export default function StudyTimetableGenerator() {
 
   return (
     <Layout title="Study Timetable Generator">
+      <Helmet>
+        <title>Study Timetable Generator | StudentToolkit</title>
+        <meta
+          name="description"
+          content="Free study timetable generator for students to organize study hours."
+        />
+      </Helmet>
       <div className="max-w-3xl mx-auto">
         <div className="bg-white rounded-2xl shadow-lg p-8">
 
@@ -74,6 +82,25 @@ export default function StudyTimetableGenerator() {
             </div>
           )}
 
+        </div>
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-4">
+            Why Use a Study Timetable?
+          </h2>
+
+          <p className="mb-4">
+            A well-planned study timetable helps you manage your time effectively,
+            ensures you cover all subjects equally, and prevents last-minute cramming.
+          </p>
+
+          <div className="bg-gray-100 p-4 rounded-xl font-semibold">
+            Hours per Subject = Total Study Hours ÷ Number of Subjects
+          </div>
+
+          <p className="mt-4">
+            Example: If you study for 5 hours daily and have 5 subjects,
+            you should allocate 1 hour to each subject.
+          </p>
         </div>
       </div>
     </Layout>

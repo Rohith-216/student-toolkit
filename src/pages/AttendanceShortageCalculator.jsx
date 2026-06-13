@@ -72,6 +72,25 @@ export default function AttendanceShortageCalculator() {
               </div>
             )}
           </div>
+          <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-bold mb-4">
+              About Attendance Shortage Calculator
+            </h2>
+
+            <p className="mb-4">
+              This calculator helps you determine how many more classes you need to attend
+              to reach your desired attendance percentage.
+            </p>
+
+            <div className="bg-gray-100 p-4 rounded-xl font-semibold">
+              Classes Needed = (Required % × Total Classes - 100 × Classes Attended) ÷ (100 - Required %)
+            </div>
+
+            <p className="mt-4">
+              Example: If you attended 30 classes out of 50 and need 75% attendance,
+              you need to attend 5 more classes.
+            </p>
+          </div>
         </div>
       </Layout>
     </>

@@ -45,7 +45,7 @@ export default function AttendanceCalculator() {
 
           <button
             onClick={calculate}
-            className="bg-black text-white px-5 py-3 rounded"
+            className="bg-blue-600 text-white px-5 py-3 rounded"
           >
             Calculate
           </button>
@@ -55,6 +55,27 @@ export default function AttendanceCalculator() {
               Attendance: {result}%
             </div>
           )}
+        </div>
+
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-4">
+            How to Calculate Attendance Percentage?
+          </h2>
+
+          <p className="mb-4">
+            Attendance percentage is calculated by dividing
+            the number of classes attended by the total
+            number of classes conducted.
+          </p>
+
+          <div className="bg-gray-100 p-4 rounded-xl">
+            Attendance % = (Classes Attended ÷ Total Classes) × 100
+          </div>
+
+          <p className="mt-4">
+            Example: If you attended 45 classes out of 50,
+            your attendance percentage is 90%.
+          </p>
         </div>
       </Layout>
     </>

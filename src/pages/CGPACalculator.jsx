@@ -38,7 +38,7 @@ export default function CGPACalculator() {
 
       <button
         onClick={calculate}
-        className="bg-black text-white px-5 py-3 rounded"
+        className="bg-blue-600 text-white px-5 py-3 rounded"
       >
         Calculate
       </button>
@@ -48,6 +48,25 @@ export default function CGPACalculator() {
           CGPA: {cgpa}
         </h2>
       )}
+      <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+        <h2 className="text-2xl font-bold mb-4">
+          What is CGPA?
+        </h2>
+
+        <p className="mb-4">
+          CGPA (Cumulative Grade Point Average) is the average
+          of grade points obtained across all semesters or subjects.
+        </p>
+
+        <div className="bg-gray-100 p-4 rounded-xl font-semibold">
+          CGPA = Sum of Grade Points ÷ Number of Subjects
+        </div>
+
+        <p className="mt-4">
+          Example: If your grade points are 8, 9, 7, 10 and 8,
+          your CGPA is 8.4.
+        </p>
+      </div>
     </Layout>
   );
 }

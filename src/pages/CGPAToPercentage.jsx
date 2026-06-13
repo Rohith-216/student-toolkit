@@ -43,6 +43,24 @@ export default function CGPAToPercentage() {
           </div>
         )}
       </div>
+      <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+        <h2 className="text-2xl font-bold mb-4">
+          How to Convert CGPA to Percentage?
+        </h2>
+
+        <p className="mb-4">
+          Percentage can be calculated from CGPA by multiplying it with a conversion
+          factor. Most universities use 9.5 as the conversion factor.
+        </p>
+
+        <div className="bg-gray-100 p-4 rounded-xl font-semibold">
+          Percentage = CGPA × 9.5
+        </div>
+
+        <p className="mt-4">
+          Example: If your CGPA is 8.5, your percentage is 80.75%.
+        </p>
+      </div>
     </Layout>
   );
 }

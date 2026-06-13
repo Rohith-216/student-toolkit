@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
+import { Helmet } from "react-helmet-async";
 
 export default function SGPACalculator() {
   const [grades, setGrades] = useState("");
@@ -22,6 +23,13 @@ export default function SGPACalculator() {
 
   return (
     <Layout title="SGPA Calculator">
+      <Helmet>
+        <title>SGPA Calculator | StudentToolkit</title>
+        <meta
+          name="description"
+          content="Free SGPA calculator for students."
+        />
+      </Helmet>
       <div className="max-w-3xl mx-auto">
         <div className="bg-white rounded-2xl shadow-lg p-8">
           <input
@@ -44,6 +52,25 @@ export default function SGPACalculator() {
               SGPA: {sgpa}
             </div>
           )}
+        </div>
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-4">
+            What is SGPA?
+          </h2>
+
+          <p className="mb-4">
+            SGPA (Semester Grade Point Average) is the average of grade points
+            obtained in all subjects taken during a particular semester.
+          </p>
+
+          <div className="bg-gray-100 p-4 rounded-xl font-semibold">
+            SGPA = Sum of Grade Points ÷ Number of Subjects
+          </div>
+
+          <p className="mt-4">
+            Example: If your grade points for a semester are 8, 9, 7, 10 and 8,
+            your SGPA is 8.4.
+          </p>
         </div>
       </div>
     </Layout>

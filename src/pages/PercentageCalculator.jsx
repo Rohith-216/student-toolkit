@@ -23,13 +23,13 @@ export default function PercentageCalculator() {
           content="Free percentage calculator for students."
         />
       </Helmet>
-      <div className="p-8">
+      <div className="bg-white rounded-2xl shadow-lg p-8">
         <input
           type="number"
           placeholder="Obtained Marks"
           value={obtained}
           onChange={(e) => setObtained(e.target.value)}
-          className="border p-3 block mb-4"
+          className="border p-3 w-full mb-4"
         />
 
         <input
@@ -37,7 +37,7 @@ export default function PercentageCalculator() {
           placeholder="Total Marks"
           value={total}
           onChange={(e) => setTotal(e.target.value)}
-          className="border p-3 block mb-4"
+          className="border p-3 w-full mb-4"
         />
 
         <button
@@ -48,10 +48,29 @@ export default function PercentageCalculator() {
         </button>
 
         {result && (
-          <h2 className="mt-4 text-xl">
+          <h2 className="mt-6 text-xl font-bold">
             Percentage: {result}%
           </h2>
         )}
+      </div>
+      <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+        <h2 className="text-2xl font-bold mb-4">
+          What is Percentage?
+        </h2>
+
+        <p className="mb-4">
+          Percentage represents a number or ratio expressed as a fraction of 100.
+          It shows how much of the total you have achieved.
+        </p>
+
+        <div className="bg-gray-100 p-4 rounded-xl font-semibold">
+          Percentage = (Obtained Marks ÷ Total Marks) × 100
+        </div>
+
+        <p className="mt-4">
+          Example: If you scored 45 out of 50 marks,
+          your percentage is 90%.
+        </p>
       </div>
     </Layout>
   );

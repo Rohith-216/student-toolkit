@@ -42,6 +42,54 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto px-4 py-10">
+          {/* Featured Tools Section */}
+          <div className="mb-16">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold">
+                Featured Tools
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link
+                to="/attendance-shortage-calculator"
+                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
+              >
+                <h3 className="font-bold text-xl mb-2">
+                  Attendance Shortage Calculator
+                </h3>
+                <p className="text-gray-600">
+                  Find how many classes you need to reach your attendance target.
+                </p>
+              </Link>
+
+              <Link
+                to="/cgpa-calculator"
+                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
+              >
+                <h3 className="font-bold text-xl mb-2">
+                  CGPA Calculator
+                </h3>
+                <p className="text-gray-600">
+                  Calculate your CGPA instantly.
+                </p>
+              </Link>
+
+              <Link
+                to="/study-timetable-generator"
+                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
+              >
+                <h3 className="font-bold text-xl mb-2">
+                  Study Timetable Generator
+                </h3>
+                <p className="text-gray-600">
+                  Generate a study schedule in seconds.
+                </p>
+              </Link>
+            </div>
+          </div>
+
+          {/* Popular Tools Section */}
           <div className="text-center mb-8">
             <p className="text-gray-600">
               {filteredTools.length} tools available
@@ -81,6 +129,36 @@ export default function Home() {
                 </p>
               </Link>
             ))}
+          </div>
+
+          {/* Stats Section */}
+          <div className="mt-16 grid md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-2xl p-8 shadow-md text-center">
+              <h3 className="text-4xl font-bold text-blue-600 mb-2">
+                10+
+              </h3>
+              <p className="text-gray-700 font-semibold">
+                Free Tools
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-md text-center">
+              <h3 className="text-4xl font-bold text-blue-600 mb-2">
+                100%
+              </h3>
+              <p className="text-gray-700 font-semibold">
+                Free to Use
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-md text-center">
+              <h3 className="text-4xl font-bold text-blue-600 mb-2">
+                24/7
+              </h3>
+              <p className="text-gray-700 font-semibold">
+                Available Online
+              </p>
+            </div>
           </div>
         </div>
       </div>
