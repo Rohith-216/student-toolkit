@@ -37,4 +37,20 @@
   <loc>https://student-toolkit-azure.vercel.app/attendance-shortage-calculator</loc>
 </url>
 
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/gpa-calculator</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/sgpa-calculator</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/semester-percentage-calculator</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/study-timetable-generator</loc>
+</url>
+
 </urlset>

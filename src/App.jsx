@@ -15,7 +15,7 @@ import GPACalculator from "./pages/GPACalculator";
 import SGPAcalculator from "./pages/SGPACalculator";
 import SemesterPercentageCalculator from "./pages/SemesterPercentageCalculator";
 import StudyTimetableGenerator from "./pages/StudyTimetableGenerator";
-// import AgeCalculator from "./pages/AgeCalculator";
+import AgeCalculator from "./pages/AgeCalculator";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
         <Route path="/attendance-calculator" element={<AttendanceCalculator />} />
         <Route path="/cgpa-calculator" element={<CGPACalculator />} />
         <Route path="/percentage-calculator" element={<PercentageCalculator />} />
-        {/* <Route path="/age-calculator" element={<AgeCalculator />} /> */}
+        <Route path="/age-calculator" element={<AgeCalculator />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cgpa-to-percentage" element={<CGPAToPercentage />} />
