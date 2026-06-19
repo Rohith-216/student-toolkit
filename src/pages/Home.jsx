@@ -20,12 +20,12 @@ export default function Home() {
         />
       </Helmet>
       <div className="min-h-screen bg-gray-100">
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-12 mb-10 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold">
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-8 md:p-12 mb-10 text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
             StudentToolkit
           </h1>
 
-          <p className="mt-4 text-lg md:text-xl">
+          <p className="mt-4 text-base sm:text-lg md:text-xl">
             Free calculators and productivity tools
             for students and freshers.
           </p>
@@ -36,12 +36,12 @@ export default function Home() {
               placeholder="Search tools..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full max-w-xl p-4 rounded-xl text-black"
+              className="w-full max-w-full sm:max-w-xl p-4 rounded-xl text-black"
             />
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto px-4 py-10">
+        <div className="max-w-6xl mx-auto w-full px-4 py-10 sm:px-6">
           {/* Featured Tools Section */}
           <div className="mb-16">
             <div className="text-center mb-8">

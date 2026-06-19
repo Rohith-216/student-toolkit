@@ -67,6 +67,41 @@ export default function CGPACalculator() {
           your CGPA is 8.4.
         </p>
       </div>
+
+      <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+        <h2 className="text-2xl font-bold mb-6">
+          Frequently Asked Questions
+        </h2>
+
+        <div className="space-y-4">
+          <div>
+            <h3 className="font-semibold">
+              What is CGPA?
+            </h3>
+            <p>
+              CGPA (Cumulative Grade Point Average) is the average of grade points obtained across all subjects or semesters.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">
+              How is CGPA calculated?
+            </h3>
+            <p>
+              CGPA is calculated by dividing the sum of all grade points by the total number of subjects.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">
+              Is CGPA important for placements?
+            </h3>
+            <p>
+              Yes. Many companies use CGPA as one of the eligibility criteria during placements.
+            </p>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }

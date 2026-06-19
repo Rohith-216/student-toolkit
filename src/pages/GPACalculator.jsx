@@ -77,6 +77,41 @@ export default function GPACalculator() {
             your GPA is 8.5.
           </p>
         </div>
+
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-6">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-semibold">
+                What is GPA?
+              </h3>
+              <p>
+                GPA stands for Grade Point Average and measures academic performance for a semester or course.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">
+                How is GPA different from CGPA?
+              </h3>
+              <p>
+                GPA represents one semester, while CGPA represents overall performance across multiple semesters.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">
+                Can I calculate GPA for any grading system?
+              </h3>
+              <p>
+                Yes. Simply enter the grade points according to your institution's grading scale.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );

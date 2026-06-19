@@ -72,6 +72,41 @@ export default function SGPACalculator() {
             your SGPA is 8.4.
           </p>
         </div>
+
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-6">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-semibold">
+                What is SGPA?
+              </h3>
+              <p>
+                SGPA stands for Semester Grade Point Average and reflects performance in a single semester.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">
+                How is SGPA calculated?
+              </h3>
+              <p>
+                SGPA is calculated by averaging the grade points obtained in all subjects.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">
+                Is SGPA used for CGPA calculation?
+              </h3>
+              <p>
+                Yes. CGPA is generally calculated using SGPAs from all semesters.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );

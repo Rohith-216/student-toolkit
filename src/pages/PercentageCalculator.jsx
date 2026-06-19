@@ -72,6 +72,41 @@ export default function PercentageCalculator() {
           your percentage is 90%.
         </p>
       </div>
+
+      <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+        <h2 className="text-2xl font-bold mb-6">
+          Frequently Asked Questions
+        </h2>
+
+        <div className="space-y-4">
+          <div>
+            <h3 className="font-semibold">
+              How do I calculate percentage?
+            </h3>
+            <p>
+              Percentage is calculated by dividing obtained marks by total marks and multiplying by 100.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">
+              Can I calculate exam percentages?
+            </h3>
+            <p>
+              Yes. This calculator is suitable for exams, tests, and assignments.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">
+              Is the result accurate?
+            </h3>
+            <p>
+              Yes. The calculator uses the standard percentage formula.
+            </p>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }

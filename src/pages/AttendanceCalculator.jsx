@@ -77,6 +77,43 @@ export default function AttendanceCalculator() {
             your attendance percentage is 90%.
           </p>
         </div>
+
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-4">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold">
+                How is attendance percentage calculated?
+              </h3>
+              <p className="mt-2 text-gray-700">
+                Attendance percentage is calculated by dividing
+                attended classes by total classes and multiplying by 100.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold">
+                What attendance percentage is required in college?
+              </h3>
+              <p className="mt-2 text-gray-700">
+                Most colleges require at least 75% attendance.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold">
+                Can I improve my attendance percentage?
+              </h3>
+              <p className="mt-2 text-gray-700">
+                Yes. Attending future classes regularly will
+                gradually improve your attendance percentage.
+              </p>
+            </div>
+          </div>
+        </div>
       </Layout>
     </>
   );

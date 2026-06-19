@@ -80,6 +80,41 @@ export default function SemesterPercentageCalculator() {
             your percentage is 84%.
           </p>
         </div>
+
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-6">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-semibold">
+                What is Semester Percentage?
+              </h3>
+              <p>
+                Semester percentage represents the percentage of marks scored in a semester.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">
+                How is semester percentage calculated?
+              </h3>
+              <p>
+                It is calculated by dividing total obtained marks by total maximum marks and multiplying by 100.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">
+                Can I use marks from different subjects?
+              </h3>
+              <p>
+                Yes. Enter marks from all subjects included in your semester.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );

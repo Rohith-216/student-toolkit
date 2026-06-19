@@ -73,6 +73,41 @@ export default function AgeCalculator() {
           your age is 21 years.
         </p>
       </div>
+
+      <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+        <h2 className="text-2xl font-bold mb-6">
+          Frequently Asked Questions
+        </h2>
+
+        <div className="space-y-4">
+          <div>
+            <h3 className="font-semibold">
+              How does the Age Calculator work?
+            </h3>
+            <p>
+              It calculates your age using your birth date and the current date.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">
+              Can it calculate age in months and days?
+            </h3>
+            <p>
+              Yes. It provides a detailed age breakdown.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-semibold">
+              Is the age calculation accurate?
+            </h3>
+            <p>
+              Yes. The calculator uses actual calendar dates.
+            </p>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 }

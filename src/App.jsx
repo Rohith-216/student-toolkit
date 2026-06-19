@@ -16,6 +16,7 @@ import SGPAcalculator from "./pages/SGPACalculator";
 import SemesterPercentageCalculator from "./pages/SemesterPercentageCalculator";
 import StudyTimetableGenerator from "./pages/StudyTimetableGenerator";
 import AgeCalculator from "./pages/AgeCalculator";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="/sgpa-calculator" element={<SGPAcalculator />} />
         <Route path="/semester-percentage-calculator" element={<SemesterPercentageCalculator />}/>
         <Route path="/study-timetable-generator" element={<StudyTimetableGenerator />}/>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

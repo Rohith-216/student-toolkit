@@ -91,6 +91,41 @@ export default function AttendanceShortageCalculator() {
               you need to attend 5 more classes.
             </p>
           </div>
+
+          <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+            <h2 className="text-2xl font-bold mb-6">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-semibold">
+                  What does the Attendance Shortage Calculator do?
+                </h3>
+                <p>
+                  It calculates how many more classes you need to attend to reach your target attendance percentage.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold">
+                  Can I use a custom attendance target?
+                </h3>
+                <p>
+                  Yes. You can enter any required percentage such as 75%, 80%, or 85%.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold">
+                  Is this calculator accurate?
+                </h3>
+                <p>
+                  Yes. It uses the standard attendance calculation formula.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </Layout>
     </>

@@ -102,6 +102,41 @@ export default function StudyTimetableGenerator() {
             you should allocate 1 hour to each subject.
           </p>
         </div>
+
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-6">
+            Frequently Asked Questions
+          </h2>
+
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-semibold">
+                How does the Study Timetable Generator work?
+              </h3>
+              <p>
+                It distributes available study hours across selected subjects.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">
+                Can I customize study hours?
+              </h3>
+              <p>
+                Yes. Enter any number of daily study hours.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-semibold">
+                Is the generated timetable fixed?
+              </h3>
+              <p>
+                No. You can adjust it according to your preferences.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </Layout>
   );
