@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { Helmet } from "react-helmet-async";
 
@@ -113,6 +114,16 @@ export default function AttendanceCalculator() {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-4">Related Tools</h2>
+          <Link
+            to="/attendance-shortage-calculator"
+            className="inline-flex w-full justify-center rounded-2xl border border-gray-200 bg-gray-50 px-6 py-4 text-center font-medium text-gray-900 hover:border-blue-500"
+          >
+            Attendance Shortage Calculator
+          </Link>
         </div>
       </Layout>
     </>

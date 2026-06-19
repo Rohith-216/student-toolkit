@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { Helmet } from "react-helmet-async";
 
@@ -110,6 +111,24 @@ export default function GPACalculator() {
                 Yes. Simply enter the grade points according to your institution's grading scale.
               </p>
             </div>
+          </div>
+        </div>
+
+        <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+          <h2 className="text-2xl font-bold mb-4">Related Tools</h2>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Link
+              to="/sgpa-calculator"
+              className="border border-gray-200 rounded-2xl p-4 text-center hover:border-blue-500"
+            >
+              SGPA Calculator
+            </Link>
+            <Link
+              to="/cgpa-calculator"
+              className="border border-gray-200 rounded-2xl p-4 text-center hover:border-blue-500"
+            >
+              CGPA Calculator
+            </Link>
           </div>
         </div>
       </div>

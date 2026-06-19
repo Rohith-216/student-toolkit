@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { Helmet } from "react-helmet-async";
 
@@ -105,6 +106,24 @@ export default function PercentageCalculator() {
               Yes. The calculator uses the standard percentage formula.
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className="mt-10 bg-white rounded-2xl shadow-lg p-8">
+        <h2 className="text-2xl font-bold mb-4">Related Tools</h2>
+        <div className="grid gap-4 sm:grid-cols-2">
+          <Link
+            to="/semester-percentage-calculator"
+            className="border border-gray-200 rounded-2xl p-4 text-center hover:border-blue-500"
+          >
+            Semester Percentage Calculator
+          </Link>
+          <Link
+            to="/cgpa-to-percentage"
+            className="border border-gray-200 rounded-2xl p-4 text-center hover:border-blue-500"
+          >
+            CGPA to Percentage Calculator
+          </Link>
         </div>
       </div>
     </Layout>
