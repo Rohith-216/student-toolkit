@@ -89,5 +89,12 @@ export const tools = [
     path: "/pomodoro-timer",
     description: "Stay focused using a customizable Pomodoro study timer",
     icon: "⏱️"
+  },
+  {
+    name: "Resume Headline Generator",
+    category: "Career",
+    path: "/resume-headline-generator",
+    description: "Generate professional resume headlines for students and freshers",
+    icon: "💼"
   }
 ];

@@ -19,6 +19,7 @@ import AgeCalculator from "./pages/AgeCalculator";
 import BMICalculator from "./pages/BMICalculator";
 import WordCounter from "./pages/WordCounter";
 import PomodoroTimer from "./pages/PomodoroTimer";
+import ResumeHeadlineGenerator from "./pages/ResumeHeadlineGenerator";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path="/bmi-calculator" element={<BMICalculator />} />
         <Route path="/word-counter" element={<WordCounter />} />
         <Route path="/pomodoro-timer" element={<PomodoroTimer />} />
+        <Route path="/resume-headline-generator" element={<ResumeHeadlineGenerator />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
