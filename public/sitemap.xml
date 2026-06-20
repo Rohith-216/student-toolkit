@@ -53,4 +53,12 @@
   <loc>https://student-toolkit-azure.vercel.app/study-timetable-generator</loc>
 </url>
 
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/word-counter</loc>
+</url>
+
+<url>
+  <loc>https://student-toolkit-azure.vercel.app/pomodoro-timer</loc>
+</url>
+
 </urlset>

@@ -41,6 +41,21 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="grid md:grid-cols-3 gap-6 mb-10 px-4 sm:px-6 max-w-6xl mx-auto">
+          <div className="bg-white p-6 rounded-xl shadow text-center">
+            <h3 className="text-3xl font-bold text-blue-600">10+</h3>
+            <p>Student Tools</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow text-center">
+            <h3 className="text-3xl font-bold text-green-600">Free</h3>
+            <p>Forever to Use</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow text-center">
+            <h3 className="text-3xl font-bold text-purple-600">Instant</h3>
+            <p>Results & Calculations</p>
+          </div>
+        </div>
+
         <div className="max-w-6xl mx-auto w-full px-4 py-10 sm:px-6">
           {/* Featured Tools Section */}
           <div className="mb-16">
@@ -55,21 +70,31 @@ export default function Home() {
                 to="/attendance-shortage-calculator"
                 className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
               >
-                <h3 className="font-bold text-xl mb-2">
+                <div className="flex items-center gap-4 mb-4">
+                <span className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-blue-50 text-blue-600 text-2xl">
+                  📉
+                </span>
+                <h3 className="font-bold text-xl">
                   Attendance Shortage Calculator
                 </h3>
-                <p className="text-gray-600">
-                  Find how many classes you need to reach your attendance target.
-                </p>
+              </div>
+              <p className="text-gray-600">
+                Find how many classes you need to reach your attendance target.
+              </p>
               </Link>
 
               <Link
                 to="/cgpa-calculator"
                 className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
               >
-                <h3 className="font-bold text-xl mb-2">
-                  CGPA Calculator
-                </h3>
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-blue-50 text-blue-600 text-2xl">
+                    🎓
+                  </span>
+                  <h3 className="font-bold text-xl">
+                    CGPA Calculator
+                  </h3>
+                </div>
                 <p className="text-gray-600">
                   Calculate your CGPA instantly.
                 </p>
@@ -79,9 +104,14 @@ export default function Home() {
                 to="/study-timetable-generator"
                 className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
               >
-                <h3 className="font-bold text-xl mb-2">
-                  Study Timetable Generator
-                </h3>
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-blue-50 text-blue-600 text-2xl">
+                    🗓️
+                  </span>
+                  <h3 className="font-bold text-xl">
+                    Study Timetable Generator
+                  </h3>
+                </div>
                 <p className="text-gray-600">
                   Generate a study schedule in seconds.
                 </p>
@@ -112,9 +142,14 @@ export default function Home() {
                 to={tool.path}
                 className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col min-h-[220px]"
               >
-                <h3 className="font-bold text-xl mb-2">
-                  {tool.name}
-                </h3>
+                <div className="flex items-center gap-4 mb-3">
+                  <span className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-blue-50 text-blue-600 text-2xl">
+                    {tool.icon}
+                  </span>
+                  <h3 className="font-bold text-xl">
+                    {tool.name}
+                  </h3>
+                </div>
 
                 <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm inline-block mb-3">
                   {tool.category}

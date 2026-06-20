@@ -16,6 +16,9 @@ import SGPAcalculator from "./pages/SGPACalculator";
 import SemesterPercentageCalculator from "./pages/SemesterPercentageCalculator";
 import StudyTimetableGenerator from "./pages/StudyTimetableGenerator";
 import AgeCalculator from "./pages/AgeCalculator";
+import BMICalculator from "./pages/BMICalculator";
+import WordCounter from "./pages/WordCounter";
+import PomodoroTimer from "./pages/PomodoroTimer";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -38,6 +41,9 @@ function App() {
         <Route path="/sgpa-calculator" element={<SGPAcalculator />} />
         <Route path="/semester-percentage-calculator" element={<SemesterPercentageCalculator />}/>
         <Route path="/study-timetable-generator" element={<StudyTimetableGenerator />}/>
+        <Route path="/bmi-calculator" element={<BMICalculator />} />
+        <Route path="/word-counter" element={<WordCounter />} />
+        <Route path="/pomodoro-timer" element={<PomodoroTimer />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
