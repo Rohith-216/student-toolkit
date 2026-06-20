@@ -7,8 +7,9 @@ import { Helmet } from "react-helmet-async";
 export default function Home() {
   const [search, setSearch] = useState("");
 
-  const filteredTools = tools.filter(tool =>
-    tool.name.toLowerCase().includes(search.toLowerCase())
+  const filteredTools = tools.filter((tool) =>
+    tool.name.toLowerCase().includes(search.toLowerCase()) ||
+    tool.description.toLowerCase().includes(search.toLowerCase())
   );
   return (
     <Layout title="">
@@ -57,65 +58,67 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto w-full px-4 py-10 sm:px-6">
-          {/* Featured Tools Section */}
-          <div className="mb-16">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold">
-                Featured Tools
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold mb-6">
+              🔥 Most Popular Tools
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link
-                to="/attendance-shortage-calculator"
-                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
+                to="/attendance-calculator"
+                className="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition"
               >
-                <div className="flex items-center gap-4 mb-4">
-                <span className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-blue-50 text-blue-600 text-2xl">
-                  📉
-                </span>
-                <h3 className="font-bold text-xl">
-                  Attendance Shortage Calculator
-                </h3>
-              </div>
-              <p className="text-gray-600">
-                Find how many classes you need to reach your attendance target.
-              </p>
+                <h3 className="font-bold">Attendance Calculator</h3>
               </Link>
-
               <Link
                 to="/cgpa-calculator"
-                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
+                className="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-blue-50 text-blue-600 text-2xl">
-                    🎓
-                  </span>
-                  <h3 className="font-bold text-xl">
-                    CGPA Calculator
-                  </h3>
-                </div>
-                <p className="text-gray-600">
-                  Calculate your CGPA instantly.
-                </p>
+                <h3 className="font-bold">CGPA Calculator</h3>
               </Link>
-
               <Link
-                to="/study-timetable-generator"
-                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300"
+                to="/pomodoro-timer"
+                className="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-blue-50 text-blue-600 text-2xl">
-                    🗓️
-                  </span>
-                  <h3 className="font-bold text-xl">
-                    Study Timetable Generator
-                  </h3>
-                </div>
-                <p className="text-gray-600">
-                  Generate a study schedule in seconds.
-                </p>
+                <h3 className="font-bold">Pomodoro Timer</h3>
               </Link>
+              <Link
+                to="/resume-headline-generator"
+                className="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition"
+              >
+                <h3 className="font-bold">Resume Headline Generator</h3>
+              </Link>
+            </div>
+          </div>
+
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold mb-6">
+              Categories
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white p-6 rounded-xl shadow">
+                <h3 className="font-bold text-xl">🎓 Academic</h3>
+                <p className="mt-2 text-gray-600">
+                  GPA, CGPA, Attendance and Percentage tools.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow">
+                <h3 className="font-bold text-xl">⏳ Productivity</h3>
+                <p className="mt-2 text-gray-600">
+                  Timers, study planners and focus tools.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow">
+                <h3 className="font-bold text-xl">💼 Career</h3>
+                <p className="mt-2 text-gray-600">
+                  Resume and placement preparation tools.
+                </p>
+              </div>
+              <div className="bg-white p-6 rounded-xl shadow">
+                <h3 className="font-bold text-xl">🛠 Utilities</h3>
+                <p className="mt-2 text-gray-600">
+                  Everyday calculators and utilities.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -140,7 +143,7 @@ export default function Home() {
               <Link
                 key={tool.path}
                 to={tool.path}
-                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300 flex flex-col min-h-[220px]"
+                className="bg-white shadow-md rounded-xl p-5 hover:shadow-xl transition flex flex-col h-full"
               >
                 <div className="flex items-center gap-4 mb-3">
                   <span className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-blue-50 text-blue-600 text-2xl">
@@ -155,7 +158,7 @@ export default function Home() {
                   {tool.category}
                 </span>
 
-                <p className="text-gray-600 flex-grow">
+                <p className="mt-2 text-gray-600 flex-grow">
                   {tool.description}
                 </p>
 
@@ -170,10 +173,10 @@ export default function Home() {
           <div className="mt-16 grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-2xl p-8 shadow-md text-center">
               <h3 className="text-4xl font-bold text-blue-600 mb-2">
-                10+
+                {tools.length}+
               </h3>
               <p className="text-gray-700 font-semibold">
-                Free Tools
+                Student Tools
               </p>
             </div>
 
@@ -193,6 +196,36 @@ export default function Home() {
               <p className="text-gray-700 font-semibold">
                 Available Online
               </p>
+            </div>
+          </div>
+
+          <div className="bg-white shadow-lg rounded-2xl p-8 mt-12">
+            <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-semibold">What is StudentToolkit?</h3>
+                <p>
+                  StudentToolkit provides free calculators, productivity tools and career tools for students and freshers.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold">Are all tools free?</h3>
+                <p>
+                  Yes. Every tool on StudentToolkit is completely free to use.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold">Do I need an account?</h3>
+                <p>
+                  No. All tools work instantly without registration.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold">Who can use StudentToolkit?</h3>
+                <p>
+                  Students, freshers, job seekers and professionals.
+                </p>
+              </div>
             </div>
           </div>
         </div>
